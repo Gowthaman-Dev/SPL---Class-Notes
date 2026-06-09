@@ -1,0 +1,47 @@
+<script>
+    //1.Closure Program - 1 (Simple Counter)
+
+    const counter = () => {
+        let time = 0
+        return () => {
+            time++
+            console.log(time);
+        }
+
+    }
+    const increment = counter()
+    increment()
+    increment()
+    increment()
+
+
+    
+
+    //2.Closure Program - 2 (User Name)
+
+    const user = (name) => {
+        return () => {
+            console.log(`Hello ${name}`);
+        }
+    }
+
+    const clo = user("Gowtham")
+
+    clo()
+
+
+
+    //3.Closure Program - 3 (Bank Balance)
+
+    const bankAccount =(balance)=>{
+        return (amount)=>{
+            balance += amount 
+            console.log(balance);
+            
+        }
+    }
+    const depost = bankAccount(1000)
+    depost(500)
+    depost(1000)
+    depost(200)
+</script>

@@ -1,0 +1,42 @@
+<script>
+    //1.Print All Names (forEach)
+
+    const names = ["Gowtham", "Ravi", "Kumar"];
+
+    names.forEach((name) => {
+        console.log(name)
+    }
+    )
+
+    //2.Double All Numbers (map)
+
+    const numbers = [10, 20, 30, 40];
+
+    const res = numbers.map((num) => {
+        return num * 2
+    })
+
+    console.log(res);
+
+
+    //3.Add "Hello"
+
+    const namess = ["Gowtham", "Ravi", "Kumar"];
+
+    const result = namess.map((name) => {
+        return "Hello " + name;
+    });
+
+    console.log(result);
+
+    //4.Print Only Even Numbers
+
+    const numb = [10, 15, 20, 25, 30];
+
+    numb.forEach((num)=>{
+        if (num % 2 ===0) {
+            console.log(num);
+            
+        }
+    })
+</script>

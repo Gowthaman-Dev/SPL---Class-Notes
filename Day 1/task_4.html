@@ -1,0 +1,57 @@
+<script>
+    //1.Object + for...in
+
+    const student = {
+        name: "Gowtham",
+        age: 22,
+        course: "MERN"
+    };
+
+    for (let key in student) {
+        console.log(key + ":" + student[key]);
+    }
+
+    //2.Company Details
+
+    const company = {
+        companyName: "TCS",
+        location: "Chennai",
+        role: "Developer"
+    };
+
+    for (let key in company) {
+        console.log(key + "-" + company[key]);
+    }
+
+    //3.Salary Greater Than 30000
+
+    const employee = {
+        name: "Ravi",
+        salary: 50000,
+        city: "Chennai"
+    };
+
+    for (let key in employee) {
+        if (key === "salary" && salary > 30000) {
+            console.log(`Greater Than 3000`);
+
+        }
+    }
+
+    //4.Count Object Properties
+
+  const studentss = {
+  name: "Gowtham",
+  age: 22,
+  course: "MERN",
+  city: "Madurai"
+};
+
+let count = 0;
+
+for (let key in studentss) {
+  count++;
+}
+
+console.log(count); 
+</script>

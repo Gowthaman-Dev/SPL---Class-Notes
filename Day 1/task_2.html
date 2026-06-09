@@ -1,0 +1,56 @@
+<script>
+    //1.Simple Callback
+
+    const greet = (name, callback) => {
+        console.log("Hello", name);
+        callback()
+    }
+
+    const sayhello = () => {
+        console.log("bye");
+    }
+
+    greet("Gowtham", sayhello)
+
+    //2.Calculator with Callback
+
+    const calculate = (a, b, callback) => {
+        callback(a, b)
+    }
+    const add = (x, y) => {
+        console.log(x + y);
+    }
+    calculate(10, 20, add)
+
+    //3.Array map() Callback
+
+    const arr = [1, 2, 3, 4, 5, 6, 6, 7]
+
+    const tot = arr.map((e, i) => {
+        return e * 2
+    })
+
+    console.log(tot);
+
+
+    //4.Array filter() Callback
+
+    const arrs = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+    const arrtotal = arrs.filter((e, i) => {
+        return e > 40
+    })
+
+    console.log(arrtotal);
+
+
+    //5.Array forEach() Callback
+
+    const forarr = ["gowtham", "Rocky", "Moni"]
+
+    const arrfor = forarr.forEach((forarrs) => {
+        return console.log(forarrs);
+        
+    })
+
+</script>
