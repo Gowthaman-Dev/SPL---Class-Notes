@@ -1,74 +1,64 @@
 import React, { useState } from "react";
 
-const App = () => {
-  const [form, setForm] = useState({
-    name: "",
-    salary: "",
-  });
-
+function SalaryBonus() {
+  const [name, setName] = useState("");
+  const [salary, setSalary] = useState("");
   const [bonus, setBonus] = useState(0);
   const [finalSalary, setFinalSalary] = useState(0);
 
-  const handleChange = (e) => {
-    setForm({
-      ...form,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const handleCalculate = (e) => {
     e.preventDefault();
 
-    const salary = Number(form.salary);
+    let sal = Number(salary);
+    let bonusValue = 0;
 
-    let bonusAmount = 0;
-
-    if (salary > 30000) {
-      bonusAmount = 5000;
-    } else if (salary > 20000) {
-      bonusAmount = 3000;
+    if (sal > 30000) {
+      bonusValue = 5000;
+    } else if (sal > 20000) {
+      bonusValue = 3000;
     } else {
-      bonusAmount = 1000;
+      bonusValue = 1000;
     }
 
-    setBonus(bonusAmount);
-    setFinalSalary(salary + bonusAmount);
+    setBonus(bonusValue);
+    setFinalSalary(sal + bonusValue);
   };
 
   return (
-    <div>
-      <h2>Employee Salary Bonus System</h2>
+    <div style={{ textAlign: "center", marginTop: "50px" }}>
+      <h2>Employee Salary Bonus Calculator</h2>
 
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="Employee Name"
-        />
-
-        <br />
-        <br />
-
-        <input
-          type="number"
-          name="salary"
-          value={form.salary}
-          onChange={handleChange}
-          placeholder="Enter Salary"
-        />
-
-        <br />
+      <form onSubmit={handleCalculate}>
+        <div>
+          <input
+            type="text"
+            placeholder="Employee Name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+        </div>
         <br />
 
-        <button type="submit">Calculate Bonus</button>
+        <div>
+          <input
+            type="number"
+            placeholder="Salary"
+            value={salary}
+            onChange={(e) => setSalary(e.target.value)}
+          />
+        </div>
+        <br />
+
+        <button type="submit">Calculate</button>
       </form>
 
+      <hr />
+
+      <h3>Employee: {name}</h3>
       <h3>Bonus: {bonus}</h3>
       <h3>Final Salary: {finalSalary}</h3>
     </div>
   );
-};
+}
 
-export default App;
+export default SalaryBonus;
