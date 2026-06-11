@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practical Round Questions & React Tasks</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f6f9;
+    padding:30px;
+    line-height:1.8;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#222;
+}
+
+.section{
+    background:#fff;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+h3{
+    color:#333;
+    margin:15px 0 10px;
+}
+
+ul{
+    margin-left:25px;
+}
+
+.topic{
+    margin-top:10px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Practical Round Questions & React Tasks</h1>
+
+<div class="section">
+<h2>Practical Round Questions</h2>
+
+<h3>Question 1 – Login Validation</h3>
+<p>Create a Login Form</p>
+<ul>
+<li>Email</li>
+<li>Password</li>
+</ul>
+
+<p>Requirements:</p>
+<ul>
+<li>If email is empty → Show "Email Required"</li>
+<li>If password is less than 6 characters → Show error</li>
+<li>If both are valid → Display "Login Successful"</li>
+</ul>
+
+<h3>Question 2 – Product Price Calculator</h3>
+<p>Create a Form</p>
+<ul>
+<li>Product Name</li>
+<li>Price</li>
+<li>Quantity</li>
+</ul>
+
+<p>Requirements:</p>
+<ul>
+<li>Calculate Total = Price × Quantity</li>
+<li>Display Total Amount</li>
+<li>If Total > 5000 → Show "Discount Eligible"</li>
+</ul>
+
+<h3>Question 3 – Student Grade System</h3>
+<p>Create a Form</p>
+<ul>
+<li>Student Name</li>
+<li>Mark</li>
+</ul>
+
+<p>Requirements:</p>
+<ul>
+<li>Mark ≥ 90 → Grade A</li>
+<li>Mark ≥ 75 → Grade B</li>
+<li>Mark ≥ 50 → Grade C</li>
+<li>Below 50 → Fail</li>
+<li>Display Result</li>
+</ul>
+
+<h3>Question 4 – Employee Salary Bonus</h3>
+<p>Create a Form</p>
+<ul>
+<li>Employee Name</li>
+<li>Salary</li>
+</ul>
+
+<p>Requirements:</p>
+<ul>
+<li>Salary > 30000 → Bonus 5000</li>
+<li>Salary > 20000 → Bonus 3000</li>
+<li>Otherwise → Bonus 1000</li>
+<li>Display Bonus and Final Salary</li>
+</ul>
+
+<h3>Question 5 – Todo Task Counter</h3>
+<p>Create a Todo Application</p>
+
+<p>Requirements:</p>
+<ul>
+<li>Add Task</li>
+<li>Display Task List</li>
+<li>Show Total Tasks Count</li>
+<li>Delete Task</li>
+<li>Show "No Tasks Available" when list is empty</li>
+</ul>
+
+<h3>Question 6 – User Search</h3>
+
+<p>API: https://jsonplaceholder.typicode.com/users</p>
+
+<p>Requirements:</p>
+<ul>
+<li>Fetch all users</li>
+<li>Display user names</li>
+<li>Add Search Box</li>
+<li>Filter users based on entered name</li>
+</ul>
+
+</div>
+
+<div class="section">
+
+<h2>React Tasks</h2>
+
+<h3>Task 1 – Employee Registration Form</h3>
+
+<p>Create a Form</p>
+
+<ul>
+<li>Employee Name</li>
+<li>Department</li>
+<li>Salary</li>
+</ul>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Use useState()</li>
+<li>Store submitted employee details in an array</li>
+<li>Display all employees below the form</li>
+<li>Show total employee count</li>
+</ul>
+
+<div class="topic">Topics:</div>
+
+<ul>
+<li>useState</li>
+<li>Form Handling</li>
+<li>Array of Objects</li>
+<li>map()</li>
+</ul>
+
+<h3>Task 2 – Product Search System</h3>
+
+<p>Create an array of products</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Add Search Input</li>
+<li>Filter products while typing</li>
+<li>If no product matches → Show "No Products Found"</li>
+<li>Display results in Card format</li>
+</ul>
+
+<div class="topic">Topics:</div>
+
+<ul>
+<li>useState</li>
+<li>filter()</li>
+<li>Conditional Rendering</li>
+</ul>
+
+<h3>Task 3 – User Data Fetch and Display</h3>
+
+<p>API: https://jsonplaceholder.typicode.com/users</p>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Fetch data using useEffect()</li>
+<li>Show loading message while fetching</li>
+<li>Display:</li>
+<ul>
+<li>Name</li>
+<li>Email</li>
+<li>Company Name</li>
+</ul>
+<li>Show error message if API fails</li>
+</ul>
+
+<div class="topic">Topics:</div>
+
+<ul>
+<li>useEffect</li>
+<li>Fetch API</li>
+<li>Conditional Rendering</li>
+</ul>
+
+<h3>Task 4 – Dark Mode Toggle</h3>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Create Dark Mode / Light Mode Switch</li>
+<li>Store current mode using useState()</li>
+<li>Change page background and text color dynamically</li>
+<li>Display current mode on screen</li>
+</ul>
+
+<div class="topic">Topics:</div>
+
+<ul>
+<li>useState</li>
+<li>Dynamic Styling</li>
+<li>Events</li>
+</ul>
+
+<h3>Task 5 – Previous Search Tracker</h3>
+
+<p>Requirements:</p>
+
+<ul>
+<li>Create Search Input</li>
+<li>Store current input using useState()</li>
+<li>Store previous search value using useRef()</li>
+<li>Display:</li>
+<ul>
+<li>Current Search</li>
+<li>Previous Search</li>
+</ul>
+</ul>
+
+<p>Example:</p>
+
+<ul>
+<li>Current Search: React</li>
+<li>Previous Search: JavaScript</li>
+</ul>
+
+<div class="topic">Topics:</div>
+
+<ul>
+<li>useState</li>
+<li>useRef</li>
+<li>useEffect</li>
+</ul>
+
+</div>
+
+</div>
+
+</body>
+</html>
